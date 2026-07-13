@@ -149,12 +149,12 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="container">
     <div class="hero-eyebrow">PreserveMy.World &times; TechRealm 2026 &middot; AI-Based 3D Scene Reconstruction</div>
     <h1>From Curated Footage to a Real 3D Reconstruction</h1>
-    <p>A working walkthrough of the actual pipeline: real photos of two Pakistani heritage sites, the feature-detection and depth math behind reconstruction, and a live, rotatable point cloud you can explore below, not a mockup.</p>
+    <p>A working walkthrough of the actual pipeline for Team Taxila: a real photo of the Jaulian monastery ruins, the feature-detection and depth math behind reconstruction, and a live, rotatable point cloud you can explore below, not a mockup.</p>
     <div class="hero-stats">
-      <div><div class="hero-stat-val">7</div><div class="hero-stat-lbl">Curated Photos</div></div>
-      <div><div class="hero-stat-val">2</div><div class="hero-stat-lbl">Heritage Sites</div></div>
+      <div><div class="hero-stat-val">1</div><div class="hero-stat-lbl">Curated Site: Taxila</div></div>
       <div><div class="hero-stat-val">13,375</div><div class="hero-stat-lbl">3D Points, Live Below</div></div>
-      <div><div class="hero-stat-val">12&ndash;17</div><div class="hero-stat-lbl">SfM Inliers Tested</div></div>
+      <div><div class="hero-stat-val">25</div><div class="hero-stat-lbl">AR Structural Lines</div></div>
+      <div><div class="hero-stat-val">24,091</div><div class="hero-stat-lbl">Feature Points Detected</div></div>
     </div>
   </div>
 </div>
@@ -163,13 +163,8 @@ footer a { color: var(--gold); text-decoration: none; }
   <div class="container">
     <div class="section-tag">Step 1</div>
     <h2 class="section-title">The Curated Footage</h2>
-    <p class="section-desc">Seven real, individually sourced and verified photos across two sites: Badshahi Mosque, Lahore, and the Jaulian monastery ruins at Taxila. Each was checked against its caption before use, one earlier version of this footage set had broken source links; they were re-verified and downloaded directly into the repo so nothing depends on an external host staying up.</p>
+    <p class="section-desc">One real photo of the Jaulian Buddhist monastery ruins at Taxila, sourced from Wikimedia Commons via the Taxila Wikipedia article and verified before use, chosen specifically to tie into Team Taxila's group sprint.</p>
     <div class="gallery">
-      <div class="gallery-item"><img src="assets/badshahi/01-front-facade.jpg" alt="Badshahi Mosque front facade"><div class="gallery-cap"><b>Badshahi Mosque</b>Front facade, ground level</div></div>
-      <div class="gallery-item"><img src="assets/badshahi/02-aerial-rooftop.jpg" alt="Badshahi Mosque aerial"><div class="gallery-cap"><b>Badshahi Mosque</b>Aerial, from an adjacent minaret</div></div>
-      <div class="gallery-item"><img src="assets/badshahi/03-interior-hall.jpg" alt="Badshahi Mosque interior"><div class="gallery-cap"><b>Badshahi Mosque</b>Interior prayer hall corridor</div></div>
-      <div class="gallery-item"><img src="assets/badshahi/05-minaret-side-angle.jpg" alt="Badshahi Mosque minaret"><div class="gallery-cap"><b>Badshahi Mosque</b>Minaret, steep side angle</div></div>
-      <div class="gallery-item"><img src="assets/badshahi/06-panoramic-elevated.jpg" alt="Badshahi Mosque panoramic"><div class="gallery-cap"><b>Badshahi Mosque</b>Elevated panoramic view</div></div>
       <div class="gallery-item"><img src="assets/taxila/jaulian-monastery-taxila.jpg" alt="Jaulian monastery Taxila"><div class="gallery-cap"><b>Jaulian Monastery, Taxila</b>Elevated view into the ruined courtyard</div></div>
     </div>
   </div>
@@ -221,7 +216,7 @@ footer a { color: var(--gold); text-decoration: none; }
       <div class="viewer-hint">Drag to rotate &middot; scroll to zoom</div>
     </div>
     <div class="honesty-box">
-      <b>What this is, honestly:</b> a monocular heuristic depth estimate, not a trained network like MiDaS and not multi-view triangulation. Real multi-view Structure from Motion was tested first on the curated Badshahi Mosque photos (ORB feature matching plus RANSAC), it found only 12&ndash;17 geometrically consistent matches out of 2,000+ keypoints per photo, not enough overlap for real triangulation since these are photos from different photographers rather than a controlled capture. This point cloud is the honest alternative: a single-photo depth heuristic, sky and haze masked out by brightness, exported as a real, hand-validated PLY file.
+      <b>What this is, honestly:</b> a monocular heuristic depth estimate, not a trained network like MiDaS and not multi-view triangulation. Real multi-view Structure from Motion (ORB feature matching plus RANSAC) was tested first on a curated multi-angle photo set from another module and found only 12&ndash;17 geometrically consistent matches out of 2,000+ keypoints per photo pair, not enough overlap for real triangulation from photos taken by different photographers rather than a controlled capture. This point cloud is the honest alternative for a single Taxila photo: a monocular depth heuristic, sky and haze masked out by brightness, exported as a real, hand-validated PLY file.
     </div>
   </div>
 </section>

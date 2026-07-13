@@ -8,9 +8,9 @@ Live page: **[shahramshafiq.github.io/PMW-heritage-showcase](https://shahramshaf
 
 ## What this is
 
-A single, self-contained web page that curates the strongest footage and reconstruction work from this internship into one narrative: real photos of two Pakistani heritage sites, the actual feature-detection and depth math behind reconstruction, and a genuine, live, drag-to-rotate 3D point cloud running in the browser via Three.js, not a screenshot or a mockup.
+A single, self-contained web page for **Team Taxila** that curates the strongest footage and reconstruction work into one narrative: a real photo of the Jaulian monastery ruins at Taxila, the actual feature-detection and depth math behind reconstruction, and a genuine, live, drag-to-rotate 3D point cloud running in the browser via Three.js, not a screenshot or a mockup.
 
-Everything shown is real work already built and verified in [`shahramshafiq/PMW-day1`](https://github.com/shahramshafiq/PMW-day1), pulled into this dedicated repo so it can be a clean, fully public, login-free web page.
+Everything shown is real work already built and verified in [`shahramshafiq/PMW-day1`](https://github.com/shahramshafiq/PMW-day1), pulled into this dedicated repo so it can be a clean, fully public, login-free web page, and scoped specifically to Taxila rather than mixing in unrelated sites from other individual modules.
 
 ---
 
@@ -20,7 +20,6 @@ Everything shown is real work already built and verified in [`shahramshafiq/PMW-
 PMW-heritage-showcase/
 ├── index.html              <- the whole page, single file
 └── assets/
-    ├── badshahi/            <- 6 real, verified Badshahi Mosque photos
     ├── taxila/               <- Jaulian monastery ruins photo
     ├── pipeline/             <- ML feature map, AR overlay, capture-to-3D renders
     └── ply/
@@ -31,7 +30,7 @@ PMW-heritage-showcase/
 
 ## The live 3D viewer
 
-Built with Three.js (loaded via CDN, no build step) and `PLYLoader`. It loads the actual `.ply` file, the same one hand-validated in the original build (13,375 points, vertex count and colors verified in-browser before shipping this page). Drag to rotate, scroll to zoom, matches the honest documentation already written for this reconstruction: a monocular depth heuristic, not multi-view Structure from Motion (that was tested first and ruled out on the curated Badshahi Mosque photos, only 12-17 geometrically consistent matches out of 2,000+ keypoints per photo pair, documented on the page itself).
+Built with Three.js (loaded via CDN, no build step) and `PLYLoader`. It loads the actual `.ply` file, the same one hand-validated in the original build (13,375 points, vertex count and colors verified in-browser before shipping this page). Drag to rotate, scroll to zoom, matches the honest documentation already written for this reconstruction: a monocular depth heuristic, not multi-view Structure from Motion (that was tested first and ruled out on a curated multi-angle photo set from another module, only 12-17 geometrically consistent matches out of 2,000+ keypoints per photo pair, documented on the page itself).
 
 ---
 
