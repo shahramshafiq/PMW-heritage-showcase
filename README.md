@@ -2,7 +2,7 @@
 
 **Shahram Shafiq | AI-Based 3D Reconstruction Track | PreserveMy.World x TechRealm 2026**
 
-Live page: **[Add your GitHub Pages URL here after enabling Pages]**
+Live page: **[shahramshafiq.github.io/PMW-heritage-showcase](https://shahramshafiq.github.io/PMW-heritage-showcase/)**
 
 ---
 
